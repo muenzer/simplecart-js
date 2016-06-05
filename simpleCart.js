@@ -92,6 +92,7 @@
 					language				: "english-us",
 
 					cartStyle				: "div",
+					cartClass				: "",
 					cartColumns			: [
 						{ attr: "name", label: "Name" },
 						{ attr: "price", label: "Price", view: 'currency' },
@@ -626,7 +627,7 @@
 						TH = isTable ? 'th' : 'div',
 						TD = isTable ? 'td' : 'div',
 						THEAD = isTable ? 'thead' : 'div',
-						cart_container = simpleCart.$create(TABLE),
+						cart_container = simpleCart.$create(TABLE).addClass(settings.cartClass),
 						thead_container = simpleCart.$create(THEAD),
 						header_container = simpleCart.$create(TR).addClass('headerRow'),
 						container = simpleCart.$(selector),
